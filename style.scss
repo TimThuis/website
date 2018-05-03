@@ -48,6 +48,7 @@ body {
       line-height: 90%;
       font-size: 3em;
       padding-left: 8px;
+      margin-top: 0;
     }
   }
   .intro-text {
@@ -95,16 +96,29 @@ body {
   padding: 4px 16px;
   display: flex;
   align-items: center;
+  position: relative;
   a {
     color: $darkGray;
     text-transform: uppercase;
     font-weight: 700;
+    z-index: 1;
   }
   img {
     padding-right: 8px;
   }
-  &:hover {
-    background: red;
+  .buttonBackground {
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    position: absolute;
+    height: 0%;
+    background-color: $darkGray;
+    opacity: 0.25;
+    transition: height 0.3s ease;
+    mix-blend-mode: multiply;
+  }
+  &:hover .buttonBackground {
+    height: 100%;
   }
 }
 
