@@ -107,7 +107,7 @@ body {
     height: 0%;
     background-color: $lightGray;
     transition: height 0.3s ease;
-    mix-blend-mode: soft-light;
+    mix-blend-mode: luminosity;
   }
   &:hover .buttonBackground {
     height: 100%;
