@@ -1,22 +1,23 @@
 $yellow: #F5CD23;
 $black: #000000;
 $darkGray: #4A4A4A;
+$lightGray: #C9C9C9;
 $white: #FFFFFF;
 
 body {
   padding: 0;
   margin: 0;
   height: 100vh;
+  background: #e8e8e8;
   a, button {
     text-decoration: none;
     border: none;
     background: none;
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: 600;
   }
   h1, h2, h3 {
     text-transform: uppercase;
-    color: $white;
     font-family: 'Montserrat', sans-serif;
   }
   p {
@@ -27,43 +28,35 @@ body {
   }
   .main {
     position: relative;
-    background-color: #ECC87A;
-    // background-image: url("./src/background-image.jpg");
-    // background-size: 175vw;
-    // background-position: center -50vw;
+    background-image: url("./src/background-image.png");
+    background-size: auto 100vh;
+    background-position: right 0;
+    background-repeat: no-repeat;
     min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    ;
   }
 }
 
 .content {
-  max-width: 800px;
+  max-width: 760px;
+  min-height: 100vh;
+  margin: auto;
   #title {
-    margin-left: 50%;
     h1 {
       font-weight: 900;
       line-height: 90%;
-      font-size: 3em;
-      padding-left: 8px;
-      margin-top: 0;
+      margin: 0 0 32px 0;
+      color: $yellow;
     }
-  }
-  .intro-text {
-    columns: auto 2;
   }
   .project-text {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
     h2 {
-      margin: 0 0 4px 0;
+      margin: 0 0 8px 0;
+      color: $darkGray;
     }
     p {
-      margin-bottom: 24px;
+      margin-bottom: 12px;
     }
   }
 }
@@ -73,7 +66,7 @@ body {
   background: $black;
   position: absolute;
   top: 0;
-  left: 40px;
+  left: 32px;
   width: 80px;
   height: 80px;
   display: flex;
@@ -85,13 +78,13 @@ body {
 
 .divider {
   width: 86px;
-  height: 3px;
-  background-color: $darkGray;
-  margin: 36px auto;
+  height: 2px;
+  background-color: $lightGray;
+  margin: 48px auto;
 }
 
 .button {
-  border: 2px solid $darkGray;
+  border: 2px solid $lightGray;
   border-radius: 4px;
   padding: 4px 16px;
   display: flex;
@@ -99,8 +92,6 @@ body {
   position: relative;
   a {
     color: $darkGray;
-    text-transform: uppercase;
-    font-weight: 700;
     z-index: 1;
   }
   img {
@@ -112,10 +103,9 @@ body {
     bottom: 0;
     position: absolute;
     height: 0%;
-    background-color: $darkGray;
-    opacity: 0.25;
+    background-color: $lightGray;
     transition: height 0.3s ease;
-    mix-blend-mode: multiply;
+    mix-blend-mode: soft-light;
   }
   &:hover .buttonBackground {
     height: 100%;
@@ -124,17 +114,16 @@ body {
 
 #contact {
   background-color: $black;
-  position: absolute;
-  bottom: 0;
   width: 192px;
-  height: 60px;
+  height: 48px;
   overflow: hidden;
+  margin: 62px auto 0 auto;
   a {
       color: $yellow;
     }
   h3, button {
     margin: 0 auto;
-    height: 60px;
+    height: 48px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -144,6 +133,48 @@ body {
   &:hover {
     h3, button {
       transform: translateY(-100%);
+    }
+  }
+}
+
+// big screens
+@media only screen and (min-width: 760px) {
+h1 {
+  text-align: center;
+  font-size: 5em;
+}
+  .intro-text {
+    display: flex;
+  }
+  .project-text {
+    align-items: center;
+    text-align: center;
+    p {
+    width: 50%;
+    }
+  }
+}
+
+// small screens
+@media only screen and (max-width: 760px) {
+  .main {
+    background-position: -120% -50% !important;
+  }
+  .divider {
+    margin: 48px 0;
+  }
+  #contact {
+    width: calc(100% + 64px);
+    margin: auto;
+  }
+  .content {
+    h1 {
+      font-size: 3em;
+      padding-top: 112px !important;
+    }
+    padding: 0 32px;
+    .intro-text p:first-child {
+      padding-bottom: 16px;
     }
   }
 }
