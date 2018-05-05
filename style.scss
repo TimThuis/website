@@ -42,11 +42,13 @@ body {
   min-height: 100vh;
   margin: auto;
   #title {
+    position: relative;
     h1 {
       font-weight: 900;
       line-height: 90%;
       margin: 0 0 32px 0;
       color: rgba(245,205,35, 0.9);
+      perspective: 100px;
       .firstLine {
         text-shadow: 1px 1px 1px $background, 0 0 0 $black;
         opacity: 0.4;
