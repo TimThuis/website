@@ -49,6 +49,7 @@ body {
       margin: 0 0 32px 0;
       color: rgba(245,205,35, 0.9);
       perspective: 100px;
+      mix-blend-mode: darken;
       .firstLine {
         text-shadow: 1px 1px 1px $background, 0 0 0 $black;
         opacity: 0.4;
@@ -197,8 +198,9 @@ h1 {
   }
   .content {
     h1 {
-      font-size: 2.3em;
+      font-size: 2.6em;
       padding-top: 112px !important;
+      margin-right: -32px !important;
     }
     padding: 0 32px;
     .intro-text p:first-child {
