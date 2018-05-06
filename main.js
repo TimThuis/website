@@ -7,11 +7,11 @@ var titleElement = document.querySelector("#title h1");
 
 document.addEventListener("mousemove", mouseMove);
 
-introTl.staggerFrom("#title div", 1, {
+introTl.staggerFrom("h1 div", 1, {
   y: "-35%",
   opacity: 0,
 }, 0.5, "start")
-.from("#title div", 2, {
+.from("h1 div", 2, {
     textShadow: "0px 0px 0px #e8e8e8, 0 0 0 #000000",
 }, "start+=2");
 
