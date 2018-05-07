@@ -3,7 +3,7 @@ var mouseLocationX;
 var mouseLocationY;
 var xMovement;
 var yMovement;
-var velocity = 0.03;
+var velocity = 0.08;
 var docWidth = document.body.offsetWidth;
 var docHeight = document.body.offsetHeight;
 var titleElement = document.querySelector("#title h1");
