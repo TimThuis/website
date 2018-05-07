@@ -66,6 +66,7 @@ body {
   margin: auto;
   #title {
     position: relative;
+    perspective: 35vh;
     h1 {
       position: relative;
       font-weight: 900;
@@ -74,6 +75,7 @@ body {
       color: rgba(245,205,35, 0.9);
       perspective: 100px;
       mix-blend-mode: darken;
+      transform-origin: 50% 65%;
       .firstLine {
         text-shadow: 1px 1px 1px $background, 0 0 0 $black;
         opacity: 0.4;
